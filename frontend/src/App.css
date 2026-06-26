@@ -1,0 +1,295 @@
+:root {
+  --surface: #ffffff;
+  --surface-soft: #fbfbfb;
+  --text: #161616;
+  --subtle: #4d4d4d;
+  --accent: #ffff00;
+  --accent-strong: #ffff00;
+  --border: #ffff00;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #ffffff;
+  color: var(--text);
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem 2.5rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.2rem 0;
+  border-bottom: 1px solid #ffff00;
+}
+
+.brand {
+  font-size: 1.85rem;
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  color: #111111;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.nav-links a,
+.ghost-btn,
+.primary-btn {
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 180ms ease, color 180ms ease;
+}
+
+.nav-links a {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.ghost-btn,
+.primary-btn {
+  padding: 0.8rem 1.1rem;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.primary-btn {
+  background: #ffff00;
+  color: #111111;
+}
+
+.ghost-btn {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid #ffff00;
+}
+
+.primary-btn:hover,
+.ghost-btn:hover,
+.nav-links a:hover {
+  transform: translateY(-2px);
+}
+
+.page-shell {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.hero-panel,
+.card {
+  background: #ffffff;
+  border: 1px solid #ffff00;
+  border-radius: 30px;
+  animation: popIn 0.9s ease both;
+}
+
+.hero-panel {
+  padding: clamp(2rem, 3vw, 3rem);
+}
+
+.hero-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.hero-eyebrow {
+  padding: 0.35rem 0.9rem;
+  background: #ffff00;
+  color: #111111;
+  border-radius: 999px;
+  display: inline-flex;
+  font-weight: 800;
+}
+
+.hero-text {
+  max-width: 720px;
+}
+
+.card {
+  padding: 1.5rem;
+}
+
+.posts-grid {
+  display: grid;
+  gap: 1.2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.post-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  border-radius: 26px;
+  background: #ffffff;
+  border: 1px solid #ffff00;
+  transition: transform 240ms ease;
+}
+
+.post-card:hover {
+  transform: translateY(-10px);
+}
+
+.card-header,
+.meta-row,
+.actions-row,
+.checkbox-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  color: #111111;
+  background: #ffff00;
+  font-size: 0.78rem;
+  margin-bottom: 0.35rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  display: inline-flex;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--text);
+}
+
+.muted {
+  color: var(--subtle);
+}
+
+.pill {
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  border: 1px solid #ffff00;
+  color: #1d1d1d;
+}
+
+.auth-shell {
+  display: grid;
+  place-items: center;
+  min-height: 74vh;
+}
+
+.auth-card,
+.form-card {
+  width: min(100%, 560px);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input,
+textarea,
+.editor-content {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1rem;
+  border-radius: 20px;
+  border: 1px solid #ffff00;
+  background: #ffffff;
+  color: #111111;
+}
+
+textarea {
+  min-height: 150px;
+}
+
+.editor-content {
+  min-height: 260px;
+  box-shadow: none;
+}
+
+.comment-form,
+.comment-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.comment-item {
+  border-top: 1px dashed #ffff00;
+  padding-top: 0.85rem;
+}
+
+.profile-card {
+  display: grid;
+  gap: 1rem;
+}
+
+.search-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.hero-panel h1 {
+  font-size: clamp(2.6rem, 5vw, 4rem);
+  line-height: 0.98;
+}
+
+.primary-btn {
+  box-shadow: none;
+}
+
+.primary-btn:hover {
+  opacity: 0.95;
+}
+
+.brand {
+  animation: none;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(24px) translateX(14px); }
+}
+
+@keyframes popIn {
+  from { opacity: 0; transform: translateY(18px) scale(0.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+
+@keyframes brandPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+}
+
+@media (max-width: 780px) {
+  .navbar,
+  .card-header,
+  .meta-row,
+  .actions-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    gap: 0.75rem;
+  }
+}

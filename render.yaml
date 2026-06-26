@@ -1,0 +1,14 @@
+services:
+  - type: web_service
+    name: mind-a-thought-backend
+    env: docker
+    plan: free
+    region: oregon
+    branch: main
+    dockerfilePath: backend/Dockerfile
+    buildCommand: mvn -B -DskipTests package
+    startCommand: java -jar target/*.jar
+    envVars:
+      - key: PORT
+        value: 8080
+    autoDeploy: true
